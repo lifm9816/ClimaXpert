@@ -18,3 +18,9 @@ export const weatherImages = {
     'Mist': require('../assets/images/mist.png'),
     'other': require('../assets/images/moderaterain.png')
 }
+
+export const recomendations = {
+    'Sunny': require('../assets/images/sunny1.png'),
+    'Sunny': require('../assets/images/sunny2.png'),
+    'Sunny': require('../assets/images/sunny3.png'),
+}

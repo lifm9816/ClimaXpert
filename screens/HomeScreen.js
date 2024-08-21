@@ -7,7 +7,7 @@ import { MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import { CalendarDaysIcon, MapPinIcon } from 'react-native-heroicons/solid'
 import { debounce } from 'lodash';
 import { fetchLocations, fetchWeatherForecast } from '../api/weather';
-import { weatherImages } from '../constants';
+import { recomendations, weatherImages } from '../constants';
 
 
 export default function HomeScreen () {
@@ -175,7 +175,6 @@ export default function HomeScreen () {
                             <Text
                                 className = "text-white font-semibold text-base"
                             >
-                                6:05 AM
                             </Text>
                         </View>
                     </View>
@@ -226,6 +225,67 @@ export default function HomeScreen () {
                                 );
                               })
                         }
+                    </ScrollView>
+
+                    <Text
+                            className = "text-white text-base"
+                        >
+                            Recomendamos usar
+                        </Text>
+                    <ScrollView
+                        horizontal
+                        contentContainerStyle = {{ paddingHorizontal: 15 }}
+                        showsHorizontalScrollIndicator = { false }
+                    >
+                        <View
+                            className="flex justify-center items-center w-24 rounded-3xl py-3 space-y-1 mr-4"
+                            style={{ backgroundColor: theme.bgWhite(0.15) }}
+                        >
+                            <Image
+                                source = { require('../assets/images/sunny1.png') } 
+                                className="w-11 h-11"
+                            />
+                            <Text className="text-white">Isdin</Text>
+                            <Text className="text-white text-xl font-semibold">
+                                Protector Solar
+                            </Text>
+                        </View>
+                        <View
+                            className="flex justify-center items-center w-24 rounded-3xl py-3 space-y-1 mr-4"
+                            style={{ backgroundColor: theme.bgWhite(0.15) }}
+                        >
+                            <Image
+                                source = { require('../assets/images/sunny2.png') } 
+                                className="w-11 h-11"
+                            />
+                            <Text className="text-white text-xl font-semibold">
+                                Gorra o sombrero
+                            </Text>
+                        </View>
+                        <View
+                            className="flex justify-center items-center w-24 rounded-3xl py-3 space-y-1 mr-4"
+                            style={{ backgroundColor: theme.bgWhite(0.15) }}
+                        >
+                            <Image
+                                source = { require('../assets/images/sunny3.png') } 
+                                className="w-11 h-11"
+                            />
+                            <Text className="text-white text-xl font-semibold">
+                                Sombrilla
+                            </Text>
+                        </View>
+                        <View
+                            className="flex justify-center items-center w-24 rounded-3xl py-3 space-y-1 mr-4"
+                            style={{ backgroundColor: theme.bgWhite(0.15) }}
+                        >
+                            <Image
+                                source = { require('../assets/images/sun.png') } 
+                                className="w-11 h-11"
+                            />
+                            <Text className="text-white font-semibold">
+                                No exponerse al sol por tiempo prolongado
+                            </Text>
+                        </View>
                     </ScrollView>
                 </View>
             </SafeAreaView>
